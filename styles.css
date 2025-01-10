@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    min-height: 100vh;
+}
+
+.agenda{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.izquierda{
+    width: 300px;
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.izquierda h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="number"]{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+button[type="submit"]{
+    padding: 10px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover{
+    background: #27ae60;
+}
+
+.tablero{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+header h2{
+    margin: 0;
+    font-size: 1.8rem;
+    color: #34495e;
+}
+
+.barra-busqueda{
+    display: flex;
+    gap: 10px;
+}
+
+.barra-busqueda input{
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.barra-busqueda button{
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.barra-busqueda button:hover{
+    background: #2980b9;
+}
+
+.lista-usuarios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.usuario{
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #dcdde1;
+    border-radius: 10px;
+    width: calc(33.333% - 20px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usuario:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.usuario h3{
+    margin: 0;
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.usuario p{
+    margin: 5px 0 0;
+    color: #7f8c8d;
+}

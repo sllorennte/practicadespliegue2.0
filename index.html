@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="agenda">
+        <div class="izquierda">
+            <h1>Agenda</h1>
+            <form id="formulario-crear" class="formulario">
+                <h2>Agregar Usuario</h2>
+                <input type="text" id="nombreInput" placeholder="Nombre del usuario" required>
+                <input type="number" id="edadInput" placeholder="Edad" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+        <div class="tablero">
+            <header>
+                <h2>Lista de Usuarios</h2>
+                <div class="barra-busqueda">
+                    <input type="text" id="buscarInput" placeholder="Buscar por nombre o ID">
+                    <button id="boton-buscar">Buscar</button>
+                </div>
+            </header>
+            <section id="lista-usuarios" class="lista-usuarios">
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
