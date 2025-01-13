@@ -9,13 +9,9 @@ app.use(express.static(__dirname));
 app.use(express.json());
 
 // Conectar a MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/practicadespliegue')
-    .then(() => {
-        console.log('Conexión a MongoDB exitosa');
-    })
-    .catch(err => {
-        console.error('Error al conectar a MongoDB:', err);
-    });
+mongoose.connect('mongodb+srv://admin:cD53735F@cluster0.tdsqx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    .then(() => console.log('Conexión a MongoDB Atlas exitosa'))
+    .catch(err => console.error('Error al conectar a MongoDB:', err));
 
 // Definir el esquema y modelo de usuario
 const usuarioSchema = new mongoose.Schema({
@@ -25,6 +21,8 @@ const usuarioSchema = new mongoose.Schema({
 const Usuario = mongoose.model('Usuario', usuarioSchema);
 
 // Rutas
+app.get('/favicon.ico', (req, res) => res.status(204));
+
 // Obtener todos los usuarios
 app.get('/api/usuarios', async (req, res) => {
     try {
